@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply selection:text-secondary-200 selection:bg-primary-400;
+	}
+	body {
+		@apply font-main  overflow-x-hidden;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-primary-400 font-heading font-bold;
+	}
+	p {
+		@apply text-text-600 font-light tracking-wide;
+	}
+	li {
+		list-style-type: none;
+	}
+	svg {
+		/* @apply fill-current */
+		@apply max-w-full;
+	}
+
+	/* Form plugin resets */
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="number"],
+	input[type="url"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="search"],
+	input[type="tel"],
+	select,
+	select[multiple],
+	textarea {
+		@apply w-full px-4 py-3 rounded-[10px] border-2 border-primary-200;
+		@apply focus:ring-1 focus:border-primary-300 focus:ring-primary-300;
+	}
+	textarea {
+		@apply h-auto;
+	}
+	/* input[type="checkbox"],
+	input[type="radio"] {
+	}
+	input[type="checkbox"] {
+	} */
+}
+
+@layer components {
+	.container {
+		@apply px-4;
+	}
+}
